@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery form</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 window_form">
+				<div class="row">
+					<div class="col-md-6 pic">
+						<img src="images/logo.png" alt="">
+					</div>
+					<div class="col-md-6 win_form">
+						<div class="head_form">
+						<h3>Сохрани свой аккаунт</h3>
+							<p>Получи бесплатно неограниченное количество <br> форм, вопросов и ответов</p>
+						</div>
+						<div class="main_form">
+							<form action="mail.php" method="POST" id="form" >
+								<input name="user_name" id="input_name" placeholder="Имя или никнейм" type="text">
+								<input name="user_email" id="input_email" placeholder="Email" type="text" >
+								<input name="user_password" id="input_password" placeholder="Пароль" type="text">
+								<button class="btn" type="submit">Сохранить ></button>
+								<div class="foot_form">
+							</form>
+							<p>Уже есть аккаунт? <a href="#">Войти</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+		<script>
+			
+        $(document).ready(function(){
+
+            $('#form').validate({
+                rules: {
+                    user_name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    user_email: {
+                        required: true,
+                        minlength: 1,
+                        email: true
+                    },
+                    user_password: {
+                        required: true,
+                        minlength: 8
+                    }
+                },
+                messages: {
+                    user_name: {
+                        required: 'Напомните как к Вам обращатся ?',
+                        minlength: 'Лаконичненько! Добавьте как пару символов пожалуйста.'
+                    },
+                    user_email: {
+                        required: 'Емейл совсем забыли ввести.',
+                        email: 'Ух! Что то не то с адресом.'
+                    },
+                    user_password: {
+                        required: 'Нужно пожалуй обезопаситься!',
+                        minlength: 'И снова лаконизм? Давайте символов так 8-мь ?!',
+                    },
+                }
+            });
+        });
+    
+	</script>
+</body>
+</html>

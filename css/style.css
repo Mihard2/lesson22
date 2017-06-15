@@ -1,0 +1,101 @@
+html {
+  font-size: 10px;
+}
+body {
+  background: url('../images/BG.jpg') no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+.window_form {
+  display: block;
+  background-color: #fff;
+  padding: 5rem;
+  margin-top: 20vh;
+  height: 100%;
+  width: auto;
+}
+.window_form .pic {
+  display: block;
+}
+.window_form .pic img {
+  height: auto;
+  width: 100%;
+  padding-top: 10rem;
+}
+.window_form .win_form {
+  display: inline-block;
+  text-align: center;
+  padding-left: 7rem;
+  margin: 0;
+}
+.window_form .win_form .head_form {
+  margin-bottom: 5rem;
+}
+.window_form .win_form .head_form h3 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.window_form .win_form .head_form p {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.window_form .win_form .main_form {
+  display: block;
+  width: 100%;
+}
+.window_form .win_form .main_form input {
+  height: 5rem;
+  width: 100%;
+  margin-top: 2rem;
+  border: 0px;
+  border-bottom: 1px solid;
+}
+.window_form .win_form .main_form #input_name {
+  background: url('../images/Name.png') no-repeat;
+  background-position: left;
+  padding-left: 2rem;
+}
+.window_form .win_form .main_form #input_email {
+  background: url('../images/Email.png') no-repeat;
+  background-position: left;
+  padding-left: 2rem;
+}
+.window_form .win_form .main_form #input_password {
+  background: url('../images/Password.png') no-repeat;
+  background-position: left;
+  padding-left: 2rem;
+}
+.window_form .win_form .main_form button {
+  margin: auto;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 5rem;
+  padding: 1.3rem 3.6rem;
+  background-color: #82c5c3;
+  color: #fff;
+}
+.window_form .win_form .foot_form {
+  margin-top: 5rem;
+  color: black;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.window_form .win_form .foot_form p {
+  margin-left: -15rem;
+}
+.window_form .win_form .foot_form p a {
+  padding-left: 1rem;
+  text-decoration: none;
+  color: #f69a7a;
+}
+.error {
+  border: 1px solid red;
+}
+label.error {
+  display: block;
+  border: none;
+  color: red;
+  font-size: 1.4rem;
+  text-align: center;
+}
