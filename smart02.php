@@ -1,4 +1,5 @@
 <?php 
+$nameForm=$_POST['FormForPassword'];
 $username=$_POST['user_name'];
 $useremail=$_POST['user_email'];
 $userpassword=$_POST['user_password'];
@@ -27,8 +28,12 @@ $mail->addAddress('Mihard2@yandex.ru', 'Joe User');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Это сабджект сообщения';
-$mail->Body    = 'Это тело сообщения дальше жирное <b>блаблабла</b>';
+$mail->Subject = $nameForm;
+$mail->Body    = "
+Имя пользователя: ".htmlspecialchars($username)."<br />
+Email адрес: ".htmlspecialchars($useremail)."<br />
+Пароль для входа:".htmlspecialchars($userpassword);
+
 $mail->AltBody = 'Это сообщение в формате plain text';
 
 if(!$mail->send()) {
